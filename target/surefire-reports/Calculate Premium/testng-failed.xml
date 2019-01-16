@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Calculate Premium]">
+  <listeners>
+    <listener class-name="utilities.PDFReport"/>
+    <listener class-name="utilities.ScreenShot"/>
+    <listener class-name="utilities.LogReport"/>
+  </listeners>
+  <test thread-count="5" verbose="0" name="Calculate Premium (Chrome Browser)(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="org.quotation.project.ValidateAge">
+        <methods>
+          <include name="verifyAgeValidation"/>
+        </methods>
+      </class> <!-- org.quotation.project.ValidateAge -->
+      <class name="org.quotation.project.ValidateMileage">
+        <methods>
+          <include name="verifyMileageValidation"/>
+        </methods>
+      </class> <!-- org.quotation.project.ValidateMileage -->
+      <class name="org.quotation.project.ValidateLayout">
+        <methods>
+          <include name="verifyCover"/>
+          <include name="verifyClaims"/>
+          <include name="verifyCalculatePremium"/>
+          <include name="verifyAnnualPremium"/>
+          <include name="afterClass"/>
+          <include name="verifyValuation"/>
+          <include name="beforeClass"/>
+          <include name="verifyMakeAndModel"/>
+          <include name="verifyMileage"/>
+          <include name="verifyAge"/>
+          <include name="verifyMonthlyPremium"/>
+          <include name="verifyClear"/>
+          <include name="verifyEngineSize"/>
+          <include name="verifyRegistrationNo"/>
+          <include name="verifyEmail"/>
+          <include name="verifyName"/>
+        </methods>
+      </class> <!-- org.quotation.project.ValidateLayout -->
+      <class name="org.quotation.project.ValidateCalculatePremium">
+        <methods>
+          <include name="initialize"/>
+          <include name="afterClass"/>
+          <include name="verifyPremiumCalculation"/>
+          <include name="reset"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- org.quotation.project.ValidateCalculatePremium -->
+    </classes>
+  </test> <!-- Calculate Premium (Chrome Browser)(failed) -->
+</suite> <!-- Failed suite [Calculate Premium] -->

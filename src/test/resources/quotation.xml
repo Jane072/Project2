@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+  
+<suite name="Calculate Premium" verbose="1" >
+	<listeners>
+	<listener class-name="utilities.PDFReport"></listener>
+	<listener class-name="utilities.ScreenShot"></listener>
+	<listener class-name="utilities.LogReport"></listener>
+	
+	
+	</listeners>
+	
+    <test name="Calculate Premium (Chrome Browser)">
+        <parameter name="browser"  value="Chrome" />
+        
+    <classes>
+       <class name="org.quotation.project.ValidateAge" />
+        <class name="org.quotation.project.ValidateMileage" />     
+       <class name="org.quotation.project.ValidateLayout" />
+       <class name="org.quotation.project.ValidateCalculatePremium" />
+       
+    </classes>
+  </test>
+ 
+  
+</suite>

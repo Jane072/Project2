@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite1]">
+  <listeners>
+    <listener class-name="utilities.ScreenShot"/>
+    <listener class-name="utilities.JyperionListener"/>
+  </listeners>
+  <test thread-count="5" verbose="0" name="Launch Browser(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="org.quotation.project.CalculatePremium">
+        <methods>
+          <include name="verifyPremiumCalculation"/>
+        </methods>
+      </class> <!-- org.quotation.project.CalculatePremium -->
+      <class name="org.quotation.project.Layout">
+        <methods>
+          <include name="verifyLayout"/>
+        </methods>
+      </class> <!-- org.quotation.project.Layout -->
+      <class name="org.quotation.project.Validation">
+        <methods>
+          <include name="verifyInvalidMileage"/>
+          <include name="verifyInvalidAge"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- org.quotation.project.Validation -->
+    </classes>
+  </test> <!-- Launch Browser(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

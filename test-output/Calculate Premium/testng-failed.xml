@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Calculate Premium]">
+  <listeners>
+    <listener class-name="utilities.ScreenShot"/>
+    <listener class-name="utilities.JyperionListener"/>
+  </listeners>
+  <test thread-count="5" name="Calculate Premium (Chrome Browser)(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="org.quotation.project.Validation">
+        <methods>
+          <include name="verifyInvalidMileage"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- org.quotation.project.Validation -->
+      <class name="org.quotation.project.Layout">
+        <methods>
+          <include name="verifyLayout"/>
+        </methods>
+      </class> <!-- org.quotation.project.Layout -->
+    </classes>
+  </test> <!-- Calculate Premium (Chrome Browser)(failed) -->
+</suite> <!-- Failed suite [Calculate Premium] -->
